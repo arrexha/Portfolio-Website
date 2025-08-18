@@ -5,7 +5,7 @@ Welcome to my personal portfolio! This website showcases my projects, skills, an
 
 ## Features
 
-- **Dark Mode Toggle**: Switch between light and dark themes effortlessly.
+- **Dark Mode Toggle**: Switch between light and dark themes .
 - **Project Showcase**: Display of my latest projects with descriptions and links.
 - **Responsive Design**: Optimized for desktops, tablets, and mobile devices.
 - **Contact Section**: Easily get in touch via email or social media links.
