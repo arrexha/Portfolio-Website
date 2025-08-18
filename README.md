@@ -29,3 +29,7 @@ If you want to run this portfolio locally:
 - GitHub: [@arrexha](https://github.com/arrexha)  
 - LinkedIn: *(https://www.linkedin.com/in/ar-r-893293136/)*  
 - Email: *(arrexha529@gmail.com)*
+
+---
+
+⭐️ From [Ar Rexha](https://github.com/arrexha)
