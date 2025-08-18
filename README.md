@@ -18,6 +18,9 @@ Welcome to my personal portfolio! This website showcases my projects, skills, an
 
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
+##🌐
+[Live Demo](https://arrexha.netlify.app/)
+
 
 
 ## Installation
