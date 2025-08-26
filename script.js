@@ -4,10 +4,10 @@ function toggleTheme() {
   const toggleBtn = document.getElementById("theme-toggle");
   body.classList.toggle("dark");
   if(body.classList.contains("dark")) {
-    toggleBtn.textContent = "☀️ Light Mode";
+    toggleBtn.textContent = "☀️";
     localStorage.setItem("theme","dark");
   } else {
-    toggleBtn.textContent = "🌙 Dark Mode";
+    toggleBtn.textContent = "🌙";
     localStorage.setItem("theme","light");
   }
 }
@@ -18,10 +18,14 @@ window.onload = () => {
   const toggleBtn = document.getElementById("theme-toggle");
   if(savedTheme === "dark") {
     document.body.classList.add("dark");
-    toggleBtn.textContent = "☀️ Light Mode";
+    toggleBtn.textContent = "☀️";
   } else {
-    toggleBtn.textContent = "🌙 Dark Mode";
+    document.body.classList.remove("dark");
+    toggleBtn.textContent = "🌙";
   }
+
+  // Add event listener for theme toggle button
+  toggleBtn.addEventListener('click', toggleTheme);
 };
 
 // Smooth scrolling for nav links
