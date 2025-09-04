@@ -2,13 +2,20 @@
 function toggleTheme() {
   const body = document.body;
   const toggleBtn = document.getElementById("theme-toggle");
-  body.classList.toggle("dark");
-  if(body.classList.contains("dark")) {
-    toggleBtn.textContent = "☀️";
-    localStorage.setItem("theme","dark");
+  const isDark = body.classList.toggle("dark");
+  toggleBtn.classList.add("rotate");
+  setTimeout(() => toggleBtn.classList.remove("rotate"), 300);
+
+  if (isDark) {
+    toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    toggleBtn.setAttribute("aria-label", "Switch to light mode");
+    toggleBtn.setAttribute("title", "Switch to light mode");
+    localStorage.setItem("theme", "dark");
   } else {
-    toggleBtn.textContent = "🌙";
-    localStorage.setItem("theme","light");
+    toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    toggleBtn.setAttribute("aria-label", "Switch to dark mode");
+    toggleBtn.setAttribute("title", "Switch to dark mode");
+    localStorage.setItem("theme", "light");
   }
 }
 
@@ -16,25 +23,25 @@ function toggleTheme() {
 window.onload = () => {
   const savedTheme = localStorage.getItem("theme");
   const toggleBtn = document.getElementById("theme-toggle");
-  if(savedTheme === "dark") {
+  if (savedTheme === "dark") {
     document.body.classList.add("dark");
-    toggleBtn.textContent = "☀️";
+    toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    toggleBtn.setAttribute("aria-label", "Switch to light mode");
+    toggleBtn.setAttribute("title", "Switch to light mode");
   } else {
     document.body.classList.remove("dark");
-    toggleBtn.textContent = "🌙";
+    toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    toggleBtn.setAttribute("aria-label", "Switch to dark mode");
+    toggleBtn.setAttribute("title", "Switch to dark mode");
   }
-
-  // Add event listener for theme toggle button
   toggleBtn.addEventListener('click', toggleTheme);
 };
-
 // Smooth scrolling for nav links
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-  anchor.addEventListener("click", function(e){
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior:"smooth" });
-    // Optionally set active class for nav links
-    document.querySelectorAll('header nav a').forEach(link=>link.classList.remove('active'));
+    document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+    document.querySelectorAll('header nav a').forEach(link => link.classList.remove('active'));
     this.classList.add('active');
   });
 });
