@@ -1,4 +1,3 @@
-// Dark Mode Toggle
 function toggleTheme() {
   const body = document.body;
   const toggleBtn = document.getElementById("theme-toggle");
