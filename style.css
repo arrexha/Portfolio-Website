@@ -217,12 +217,11 @@ h2 {
   transform: translateY(-3px) scale(1.04);
   box-shadow: 0 7px 18px rgba(0,0,0,0.13);
 }
-.skill-btn i { font-size: 1.3rem; }
-.skill-btn:nth-child(1) { background: #306998; color: #fff; }
-.skill-btn:nth-child(2) { background: #f0db4f; color: #222; }
-.skill-btn:nth-child(3) { background: #00599C; color: #fff; }
-.skill-btn:nth-child(4) { background: #e34c26; color: #fff; }
-.skill-btn:nth-child(5) { background: #264de4; color: #fff; }
+.skill-btn:nth-child(1) { background: #306998; color: #fff; }   /* Python */
+.skill-btn:nth-child(2) { background: #00599C; color: #fff; }   /* C++ */
+.skill-btn:nth-child(3) { background: #e34c26; color: #fff; }   /* HTML */
+.skill-btn:nth-child(4) { background: #264de4; color: #fff; }   /* CSS */
+.skill-btn:nth-child(5) { background: #f0db4f; color: #222; }   /* JavaScript */
 
 /* ==== Projects ==== */
 .projects-grid {
